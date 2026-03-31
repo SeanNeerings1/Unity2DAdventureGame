@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8204984243359243297}
   - component: {fileID: 8056453276476445740}
   - component: {fileID: 8288624726854024659}
+  - component: {fileID: -2182615397902629292}
+  - component: {fileID: 6961179228985415558}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -216,3 +218,39 @@ MonoBehaviour:
   OnJumpReceived:
     m_PersistentCalls:
       m_Calls: []
+--- !u!232 &-2182615397902629292
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915173522100629333}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 1
+  m_MaxDistanceOnly: 0
+--- !u!114 &6961179228985415558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915173522100629333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442b491da4f5b3b4f92d9c3ff23ce7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleLength: 2
+  grappleLayer:
+    serializedVersion: 2
+    m_Bits: 0

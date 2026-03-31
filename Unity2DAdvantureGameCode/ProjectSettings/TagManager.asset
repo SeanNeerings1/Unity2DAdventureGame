@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -41,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1831414319
     locked: 0
   m_RenderingLayers:
   - Default

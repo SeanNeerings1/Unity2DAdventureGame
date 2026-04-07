@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 public class StartMenuController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void onStartClick()
+    private void onStartClick()
     {
         SceneManager.LoadScene("lvl1");
     }
-    public void onExitClick()
+    private void onExitClick()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

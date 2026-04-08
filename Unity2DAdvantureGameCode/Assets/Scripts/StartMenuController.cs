@@ -16,4 +16,9 @@ public class StartMenuController : MonoBehaviour
 #endif
         Application.Quit();
     }
+    private void onRestartClick()
+    {
+        playerRespawner.ResetRespawnCount();
+        SceneManager.LoadScene("startScene");
+    }
 }

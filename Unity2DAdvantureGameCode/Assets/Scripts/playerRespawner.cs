@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class playerRespawner : MonoBehaviour
 {
@@ -7,9 +8,18 @@ public class playerRespawner : MonoBehaviour
     [SerializeField] private int currentScene;
     [SerializeField] private int respawnPoint;
     [SerializeField] private Transform[] respawnPoints;
+    [SerializeField] private static int respawnCount = 0;
+    [SerializeField] private TextMeshProUGUI respawnText;
+    private bool isRespawning = false;
+
+    public static void ResetRespawnCount()
+    {
+        respawnCount = 0;
+    }
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
+        respawnText.text = "Deaths: " + respawnCount;
     }
 
     void Update()
@@ -18,7 +28,13 @@ public class playerRespawner : MonoBehaviour
     }
         private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Respawn" && sceneRespawn == true)
+        if (other.gameObject.CompareTag("Respawn") && !isRespawning)
+        {
+            isRespawning = true;
+
+            respawnCount++;
+        }
+            if (other.gameObject.tag == "Respawn" && sceneRespawn == true)
         {
             SceneManager.LoadScene(currentScene);
         }

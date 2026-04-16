@@ -1,4 +1,4 @@
-# Game Design Document (GDD)
+# Game documentation
 
 ## 1. Game Overview
 
